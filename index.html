@@ -18,7 +18,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/ShawnSpooner/docs.healthesignature.com">Fork Me on GitHub</a>
 
-          <h1 id="project_title">Docs.healthesignature.com</h1>
+          <h1 id="project_title">docs.healthesignature.com</h1>
           <h2 id="project_tagline">documents repository for healthesignature.com</h2>
 
           <section id="downloads">
@@ -33,7 +33,7 @@
       <section id="main_content" class="inner">
         <h3>JSON Forms</h3>
 
-<h3>Types</h3>
+<h3>Allowed Elements</h3>
 
 <ul>
 <li>text - read only text</li>
@@ -175,6 +175,38 @@
 }
 </code></pre>
 <image src="images/group_example.png"></image>
+
+<h3>How to build a form</h3>
+To build a form enclose the elements of the form inside this wrapper inside the fields element
+
+<h5>Elements:</h5>
+<ul>
+  <li>name - is the text that will be shown at the top of the iPad</li>
+  <li>id - is what will be sent back to CCC when the form is fulfilled as the name of the form</li>
+  </ul>
+<pre><code>{
+  "name":"Patient Medical History",
+  "id": "PMH",
+  "description":"",
+  "fields":[]
+}</code></pre>
+
+<h3>How to Send a set of forms for a patient</h3>
+To send forms to the api include them in this wrapper inside of the forms array element
+<h5>Patient Elements:</h5>
+<ul>
+  <li>id - the id of the patient from the EMR</li>
+  <li>dateOfBirth - the date of birth from the EMR</li>
+  <li>lastName - the last name of the patient from the EMR</li>
+</ul>
+<pre><code>{
+  "patient": {
+    "dateOfBirth": "10/31/1980"
+   ,"id": "808"
+   ,"lastName": "Jones"
+  }
+  ,"forms": []
+}</code></pre>
       </section>
     </div>
 
