@@ -36,19 +36,19 @@
 <h3>Types</h3>
 
 <ul>
-<li>text</li>
-<li>textField</li>
-<li>textArea</li>
-<li>dropDown</li>
-<li>list</li>
-<li>group</li>
+<li>text - read only text</li>
+<li>textField - user editable single line text input field</li>
+<li>textArea - multi-line user editable text input field</li>
+<li>dropDown - a select list of possible values allowing the user to select only one option</li>
+<li>list -  a read only list of values</li>
+<li>group - a two column grouping of checkboxes</li>
 </ul>
 
 <h3>text</h3>
 
 <pre><code>{
   "type":"text"
-  ,"value":"REVIEW OF SYSTEMS: Please check all the items below that apply to your current health"
+  ,"value":"RISK RACTORS: Please select the appropriate values below that reflect your risk factors"
 }
 </code></pre>
 
@@ -66,6 +66,42 @@
 </code></pre>
 
 <image src="images/textField_example.png"></image>
+
+
+<h3>textArea</h3>
+
+<pre>
+<code>{
+  "type":"textArea"
+  ,"title":"Simple Text Area"
+  ,"name":"userFreeText"
+  ,"value":"some very long winded text that can span multiple lines"
+}
+</code></pre>
+
+<image src="images/textArea_example.png"></image>
+
+
+<h3>dropDown</h3>
+
+<pre>
+<code>{
+  "type":"dropDown"
+ ,"title":"Does Patient Exercise"
+ ,"name":"Does Patient Exercise"
+ ,"placeHolder":"Choose one..."
+ ,"value":""
+ ,"options":[
+    {"display":"yes","value":"yes"}
+   ,{"display":"no","value":"no"}
+  ]
+}
+</code></pre>
+
+<image src="images/dropDown_example.png"></image>
+
+
+
       </section>
     </div>
 
