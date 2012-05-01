@@ -36,13 +36,30 @@
 <h3>Allowed Elements</h3>
 
 <ul>
+<li>dateField</li>
 <li>text - read only text</li>
 <li>textField - user editable single line text input field</li>
 <li>textArea - multi-line user editable text input field</li>
 <li>dropDown - a select list of possible values allowing the user to select only one option</li>
 <li>list -  a read only list of values</li>
 <li>group - a two column grouping of checkboxes</li>
+<li>toggle</li>
 </ul>
+
+<h3>dateField</h3>
+
+<pre>
+<code>{
+  "type":"dateField"
+  ,"title":"Previous Pregnancy"
+  ,"name":"Previous Pregnancy"
+  ,"value":""
+}
+</code></pre>
+
+<image src="images/date_example.png"></image>
+
+
 
 <h3>text</h3>
 
@@ -175,6 +192,26 @@
 }
 </code></pre>
 <image src="images/group_example.png"></image>
+
+
+<h3>toggle</h3>
+
+<pre>
+<code>{
+  "type":"toggle"
+ ,"title":"Does Patient Exercise"
+ ,"name":"Does Patient Exercise"
+ ,"value":""
+ ,"options":[
+    {"display":"yes","value":"yes"}
+   ,{"display":"no","value":"no"}
+  ]
+}
+</code></pre>
+
+<image src="images/toggle_example.png"></image>
+
+
 
 <h3>How to build a form</h3>
 To build a form enclose the elements of the form inside this wrapper inside the fields element
