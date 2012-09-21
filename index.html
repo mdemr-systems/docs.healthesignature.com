@@ -17,20 +17,17 @@
     <div id="header_wrap" class="outer">
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/ShawnSpooner/docs.healthesignature.com">Fork Me on GitHub</a>
-
+          <a href="api.html">API</a>
           <h1 id="project_title">docs.healthesignature.com</h1>
           <h2 id="project_tagline">documents repository for healthesignature.com</h2>
 
-          <section id="downloads">
-            <a class="zip_download_link" href="https://github.com/ShawnSpooner/docs.healthesignature.com/zipball/master">Download this project as a .zip file</a>
-            <a class="tar_download_link" href="https://github.com/ShawnSpooner/docs.healthesignature.com/tarball/master">Download this project as a tar.gz file</a>
-          </section>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+
         <h3>JSON Forms</h3>
 
 <h3>Allowed Elements</h3>
@@ -109,8 +106,8 @@
  ,"placeHolder":"Choose one..."
  ,"value":""
  ,"options":[
-    {"display":"yes","value":"yes"}
-   ,{"display":"no","value":"no"}
+    {"display":"no","value":"no"}
+   ,{"display":"yes","value":"yes"}
   ]
 }
 </code></pre>
@@ -203,8 +200,8 @@
  ,"name":"Does Patient Exercise"
  ,"value":""
  ,"options":[
-    {"display":"yes","value":"yes"}
-   ,{"display":"no","value":"no"}
+    {"display":"no","value":"no"}
+   ,{"display":"yes","value":"yes"}
   ]
 }
 </code></pre>
@@ -243,8 +240,28 @@ To send forms to the api include them in this wrapper inside of the forms array 
    ,"id": "808"
    ,"lastName": "Jones"
   }
+  ,"metaData":{}
   ,"forms": []
 }</code></pre>
+
+
+<h3>Known metadata</h3>
+
+<pre><code>{
+  "id": "CS1",
+  "name": "New Patient Questionnaire",
+  "metaData":{
+    "clinicalSummary" : "New Patient Questionnaire",
+    "destination" : "EMR",
+    "signed" : "true",
+    "privacy" : "true",
+    "release" : "true",
+    "benefits" : "true",
+    "importAsSigned" : "AO"
+}</code></pre>
+
+
+
       </section>
     </div>
 
